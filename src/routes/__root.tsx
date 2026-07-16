@@ -88,10 +88,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         property: "og:description",
         content:
-          "Automate WhatsApp conversations with AI agents. Respond in seconds, qualify leads, and convert sales 24/7.",
+          "Automate WhatsApp conversations with AI agents. Respond in seconds, qualify leads, and convert sales 24/7 — no human intervention needed.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "FHPS Agents — AI Agents for WhatsApp" },
+      { name: "twitter:description", content: "Automate WhatsApp conversations with AI agents. Respond in seconds, qualify leads, and convert sales 24/7 — no human intervention needed." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/d3f1cb7e-0819-4d27-b5fa-32c0324b956a/id-preview-6003b746--885ee537-899b-4836-a3fd-378a137207a5.lovable.app-1783900158979.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/d3f1cb7e-0819-4d27-b5fa-32c0324b956a/id-preview-6003b746--885ee537-899b-4836-a3fd-378a137207a5.lovable.app-1783900158979.png" },
     ],
     links: [
       {
