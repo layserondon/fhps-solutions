@@ -20,7 +20,7 @@ export function FloatingRobot() {
 
   return (
     <div
-      className="fixed bottom-4 right-0 z-40 transition-opacity duration-500 sm:bottom-4 sm:right-6"
+      className="fixed bottom-4 right-0 z-40 transition-opacity duration-500 sm:bottom-4 sm:right-0"
       style={{ opacity: dimmed ? 0.25 : 1 }}
     >
       {hovered && (
