@@ -7,6 +7,7 @@ const WHATSAPP_MESSAGE = encodeURIComponent(
   'Olá! Vi seu site e gostaria de saber mais sobre os seus agentes de IA para WhatsApp .'
 );
 const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`;
+console.log(WHATSAPP_URL);
 
 export function FloatingRobot() {
   const [dimmed, setDimmed] = useState(false);
