@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import robotAsset from "@/assets/robot-mascot.png.asset.json";
 
 // Replace with actual WhatsApp number or email
-const WHATSAPP_NUMBER = '551196122-6352';
+const WHATSAPP_NUMBER = '5511961226352';
 const WHATSAPP_MESSAGE = encodeURIComponent(
   'Olá! Vi seu site e gostaria de saber mais sobre os seus agentes de IA para WhatsApp .'
 );
