@@ -50,13 +50,12 @@ export function FloatingRobot() {
               "radial-gradient(circle, color-mix(in oklab, var(--cyan-glow) 35%, transparent), color-mix(in oklab, var(--violet-glow) 25%, transparent) 60%, transparent 75%)",
           }}
         />
-        <a
-          href={WHATSAPP_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Abrir WhatsApp
-        </a>
+        <img
+          src={robotAsset.url}
+          alt="FHPS Agents robot assistant"
+          className="animate-float-soft h-[90px] w-auto sm:h-[125px]"
+          loading="lazy"
+        />
       </a>
     </div>
   );
