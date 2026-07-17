@@ -17,9 +17,9 @@ const products = [
   },
   {
     icon: CalendarClock,
-    name: "Booking Agent",
-    tagline: "Fills your calendar on autopilot.",
-    features: ["Scheduling & confirmation", "Automatic reminders", "For clinics, salons & services"],
+    name: "Agente de Reserva",
+    tagline: "Preenche sua agenda no piloto automático.",
+    features: ["Agendamento e confirmação", "Lembretes automáticos", "Para clínicas, salões e serviços"],
   },
 ];
 
