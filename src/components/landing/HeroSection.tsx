@@ -15,12 +15,12 @@ export function HeroSection() {
         <div className="text-center lg:text-left">
           <FadeIn>
             <p className="font-mono text-xs font-medium uppercase tracking-[0.3em] text-primary">
-              Agents AI Para WhatsApp
+              Agentes IA Para WhatsApp
             </p>
           </FadeIn>
           <FadeIn delay={100}>
             <h1 className="font-display mt-5 text-4xl font-bold uppercase leading-tight tracking-tight text-foreground sm:text-5xl lg:text-6xl">
-              Seu atendimento ao cliente. <span className="gradient-text">Sempre online.</span>
+              Seu negócio. <span className="gradient-text">Sempre online.</span>
             </h1>
           </FadeIn>
           <FadeIn delay={200}>
@@ -32,10 +32,10 @@ export function HeroSection() {
           <FadeIn delay={300}>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-4 lg:justify-start">
               <a href="#cta">
-                <SlidingTextButton label="Try it free" size="lg" />
+                <SlidingTextButton label="Agende uma reunião" size="lg" />
               </a>
               <a href="#solution">
-                <SlidingTextButton label="Watch demo" variant="ghost" size="lg" />
+                <SlidingTextButton label="Demo" variant="ghost" size="lg" />
               </a>
             </div>
           </FadeIn>

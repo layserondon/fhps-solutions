@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils";
 type Variant = "broken" | "flowing" | "resolved";
 
 type Message = {
-  from: "Cliente" | "agente" | "system";
+  from: "cliente" | "agente" | "system";
   text: string;
   time?: string;
   status?: "enviado" | "lido";
@@ -13,30 +13,30 @@ const CONVERSATIONS: Record<Variant, { title: string; messages: Message[]; typin
   broken: {
     title: "Cliente · 23:48 ",
     messages: [
-      { from: "Cliente", text: "Olá! Você ainda tem essa peça no estoque? ", time: "23:48 "},
-      { from: "Cliente", text: "Oiee?? Eu preciso disso para amanhã!!", time: "00:15 "},
-      { from: "Cliente", text: "Deixa quieto, encontrei em outro lugar? ", time: "9:02 "},
+      { from: "cliente", text: "Olá! Você ainda tem essa peça no estoque? ", time: "23:48 "},
+      { from: "cliente", text: "Oiee?? Eu preciso disso para amanhã!!", time: "00:15 "},
+      { from: "cliente", text: "Deixa quieto, encontrei em outro lugar? ", time: "9:02 "},
     ],
   },
   flowing: {
     title: "FHPS Agente · online",
     typing: true,
     messages: [
-      { from: "Cliente", text: "Olá! Você ainda tem essa peça no estoque?", time: "23:48 " },
+      { from: "cliente", text: "Olá! Você ainda tem essa peça no estoque?", time: "23:48 " },
       {
         from: "agente",
         text: "Oi!! Sim — nós temos 3 peças restantes tamanho M. Quer que eu deixe reservado para você? 🎯",
         time: "23:48 ",
         status: "lido",
       },
-      { from: "Cliente", text: "Sim, por favor!", time: "23:49 " },
+      { from: "cliente", text: "Sim, por favor!", time: "23:49 " },
     ],
   },
   resolved: {
     title: "FHPS Agent · online",
     messages: [
       { from: "agente", text: "Sua compra foi feita com sucesso! 📦 Entrega: Terça-feira, 14–16 horas.", time: "23:50 ", status: "lido" },
-      { from: "Cliente", text: "Foi rápido. Obrigada!", time: "23:50 " },
+      { from: "cliente", text: "Foi rápido. Obrigada!", time: "23:50 " },
       { from: "system", text: "✓ Venda Concluída — lead convertido em 2 minutos " },
     ],
   },
@@ -69,8 +69,8 @@ export function PhoneMockup({ variant, className }: { variant: Variant; classNam
           </div>
           <div>
             <p className="text-xs font-semibold text-foreground">{convo.title}</p>
-            {!isBroken && <p className="text-[10px] text-accent">replies instantly</p>}
-            {isBroken && <p className="text-[10px] text-muted-foreground">last seen yesterday</p>}
+            {!isBroken && <p className="text-[10px] text-accent">responde instantaneamente</p>}
+            {isBroken && <p className="text-[10px] text-muted-foreground">visto pela última vez ontem</p>}
           </div>
         </div>
         {/* messages */}
@@ -88,7 +88,7 @@ export function PhoneMockup({ variant, className }: { variant: Variant; classNam
                 key={i}
                 className={cn(
                   "max-w-[85%] rounded-xl px-3 py-2 text-xs leading-relaxed",
-                  m.from === "customer"
+                  m.from === "cliente"
                     ? "self-start rounded-bl-sm bg-muted text-foreground"
                     : "self-end rounded-br-sm bg-primary/15 text-foreground",
                 )}
@@ -96,8 +96,8 @@ export function PhoneMockup({ variant, className }: { variant: Variant; classNam
                 {m.text}
                 <span className="mt-1 flex items-center justify-end gap-1 text-[9px] text-muted-foreground">
                   {m.time}
-                  {m.status && <span className={m.status === "read" ? "text-primary" : ""}>✓✓</span>}
-                  {isBroken && m.from === "customer" && <span>✓</span>}
+                  {m.status && <span className={m.status === "lido" ? "text-primary" : ""}>✓✓</span>}
+                  {isBroken && m.from === "cliente" && <span>✓</span>}
                 </span>
               </div>
             ),
