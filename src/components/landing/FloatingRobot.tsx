@@ -1,7 +1,12 @@
 import { useEffect, useState } from "react";
 import robotAsset from "@/assets/robot-mascot.png.asset.json";
 
-const WHATSAPP_URL = "https://wa.me/+5511961226352?text=Olá!%20I%20gostaria%20de%20saber%20mais%20sobre%20o%20FHPS%20Agentes";
+// Replace with actual WhatsApp number or email
+const WHATSAPP_NUMBER = '551196122-6352';
+const WHATSAPP_MESSAGE = encodeURIComponent(
+  'Olá! Vi seu site e gostaria de saber mais sobre os seus agentes de IA para WhatsApp .'
+);
+const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`;
 
 export function FloatingRobot() {
   const [dimmed, setDimmed] = useState(false);
@@ -25,7 +30,7 @@ export function FloatingRobot() {
     >
       {hovered && (
         <div className="glass absolute -top-12 right-0 whitespace-nowrap rounded-xl px-4 py-2 text-xs font-medium text-foreground">
-          Precisa de ajuda? Converse conosco →
+          Precisa de ajuda? →
         </div>
       )}
       <a
