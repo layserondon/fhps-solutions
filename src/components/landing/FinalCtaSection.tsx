@@ -11,7 +11,7 @@ export function FinalCtaSection() {
     e.preventDefault();
     const form = e.currentTarget;
     const data = new FormData(form);
-    if (!data.get("name") || !data.get("whatsapp")) {
+    if (!data.get("nome") || !data.get("whatsapp")) {
       setStatus("error");
       return;
     }
@@ -29,10 +29,10 @@ export function FinalCtaSection() {
       <div className="relative mx-auto max-w-3xl text-center">
         <FadeIn>
           <h2 className="font-display text-3xl font-bold uppercase leading-tight tracking-tight text-foreground sm:text-4xl">
-            Your next customer won't wait. <span className="gradient-text">Neither should your agent.</span>
+            Seu próximo cliente não vai esperar. <span className="gradient-text">Seu agente também não devia.</span>
           </h2>
           <p className="mx-auto mt-4 max-w-md text-muted-foreground">
-            Start responding on WhatsApp with AI today — no code, no hassle.
+          Comece a responder no WhatsApp com IA hoje mesmo — sem programação, sem complicações.
           </p>
         </FadeIn>
         <FadeIn delay={150}>
@@ -40,49 +40,49 @@ export function FinalCtaSection() {
             <form id="lead-form" onSubmit={onSubmit} className="space-y-4 text-left">
               <div>
                 <label htmlFor="lead-name" className="text-xs font-medium text-muted-foreground">
-                  Name
+                  Nome
                 </label>
                 <input
                   id="lead-name"
-                  name="name"
+                  name="nome"
                   required
-                  placeholder="Your name"
+                  placeholder="Seu nome"
                   className="glass mt-1.5 w-full rounded-xl px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/60 focus:border-primary/60 focus:outline-none"
                 />
               </div>
               <div>
                 <label htmlFor="lead-whatsapp" className="text-xs font-medium text-muted-foreground">
-                  WhatsApp number
+                  Número do WhatsApp
                 </label>
                 <input
                   id="lead-whatsapp"
                   name="whatsapp"
                   type="tel"
                   required
-                  placeholder="+1 555 000 0000"
+                  placeholder="+55 11 000 0000"
                   className="glass mt-1.5 w-full rounded-xl px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/60 focus:border-primary/60 focus:outline-none"
                 />
               </div>
               <div>
                 <label htmlFor="lead-company" className="text-xs font-medium text-muted-foreground">
-                  Company name
+                  Nome da Empresa
                 </label>
                 <input
                   id="lead-company"
                   name="company"
-                  placeholder="Your business"
+                  placeholder="Sua empresa"
                   className="glass mt-1.5 w-full rounded-xl px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/60 focus:border-primary/60 focus:outline-none"
                 />
               </div>
               <SlidingTextButton type="submit" label="Start your free 7-day trial" size="lg" className="w-full" />
               {status === "success" && (
                 <p className="rounded-xl border border-accent/30 bg-accent/10 px-4 py-3 text-center text-sm font-medium text-accent">
-                  Thanks! We received your request.
+                  Obrigado! Entraremos em contato logo.
                 </p>
               )}
               {status === "error" && (
                 <p className="rounded-xl border border-destructive/30 bg-destructive/10 px-4 py-3 text-center text-sm font-medium text-destructive">
-                  Something went wrong, please try again.
+                  Algo não saiu como planejado. Tente novo!
                 </p>
               )}
             </form>
@@ -95,16 +95,16 @@ export function FinalCtaSection() {
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
           <div>
             <p className="font-display text-sm font-bold text-foreground">
-              FHPS <span className="gradient-text">AGENTS</span>
+              FHPS <span className="gradient-text">AGENTES</span>
             </p>
             <p className="mt-3 text-xs leading-relaxed text-muted-foreground">
-              AI agents that automate WhatsApp conversations and convert leads into sales, 24/7.
+            Agentes de IA que automatizam conversas no WhatsApp e convertem leads em vendas, 24/7.
             </p>
           </div>
           <div>
-            <p className="text-xs font-semibold uppercase tracking-widest text-muted-foreground">Product</p>
+            <p className="text-xs font-semibold uppercase tracking-widest text-muted-foreground">Produtos</p>
             <ul className="mt-4 space-y-2 text-sm">
-              {["Sales Agent", "Support Agent", "Booking Agent"].map((l) => (
+              {["Agente de Vendas", "Agente de Atendimentos", "Agente de Reservas"].map((l) => (
                 <li key={l}>
                   <a href="#products" className="text-muted-foreground transition-colors hover:text-foreground">
                     {l}
@@ -114,7 +114,7 @@ export function FinalCtaSection() {
             </ul>
           </div>
           <div>
-            <p className="text-xs font-semibold uppercase tracking-widest text-muted-foreground">Company</p>
+            <p className="text-xs font-semibold uppercase tracking-widest text-muted-foreground">Empresa</p>
             <ul className="mt-4 space-y-2 text-sm">
               {["About", "Careers", "Terms", "Privacy"].map((l) => (
                 <li key={l}>
@@ -126,8 +126,8 @@ export function FinalCtaSection() {
             </ul>
           </div>
           <div>
-            <p className="text-xs font-semibold uppercase tracking-widest text-muted-foreground">Contact</p>
-            <p className="mt-4 text-sm text-muted-foreground">hello@fhpsagents.com</p>
+            <p className="text-xs font-semibold uppercase tracking-widest text-muted-foreground">Contato</p>
+            <p className="mt-4 text-sm text-muted-foreground">iaagentsfhps@gmail.com</p>
             <div className="mt-4 flex gap-3">
               {[Linkedin, Instagram, Twitter].map((Icon, i) => (
                 <a
@@ -143,7 +143,7 @@ export function FinalCtaSection() {
           </div>
         </div>
         <p className="mt-10 border-t border-border pt-6 text-center text-xs text-muted-foreground">
-          © 2026 FHPS Agents. All rights reserved.
+          © 2026 FHPS Agentes. Todos os direitos reservados.
         </p>
       </footer>
     </section>

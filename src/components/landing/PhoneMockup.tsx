@@ -3,41 +3,41 @@ import { cn } from "@/lib/utils";
 type Variant = "broken" | "flowing" | "resolved";
 
 type Message = {
-  from: "customer" | "agent" | "system";
+  from: "Cliente" | "agente" | "system";
   text: string;
   time?: string;
-  status?: "sent" | "read";
+  status?: "enviado" | "lido";
 };
 
 const CONVERSATIONS: Record<Variant, { title: string; messages: Message[]; typing?: boolean }> = {
   broken: {
-    title: "Customer · 11:48 PM",
+    title: "Cliente · 23:48 ",
     messages: [
-      { from: "customer", text: "Hi! Do you have this in stock?", time: "11:48 PM" },
-      { from: "customer", text: "Hello?? I need it for tomorrow", time: "12:15 AM" },
-      { from: "customer", text: "Never mind, found it elsewhere.", time: "9:02 AM" },
+      { from: "Cliente", text: "Olá! Você ainda tem essa peça no estoque? ", time: "23:48 "},
+      { from: "Cliente", text: "Oiee?? Eu preciso disso para amanhã!!", time: "00:15 "},
+      { from: "Cliente", text: "Deixa quieto, encontrei em outro lugar? ", time: "9:02 "},
     ],
   },
   flowing: {
-    title: "FHPS Agent · online",
+    title: "FHPS Agente · online",
     typing: true,
     messages: [
-      { from: "customer", text: "Hi! Do you have this in stock?", time: "11:48 PM" },
+      { from: "Cliente", text: "Olá! Você ainda tem essa peça no estoque?", time: "23:48 " },
       {
-        from: "agent",
-        text: "Hey! Yes — we have 3 left in size M. Want me to reserve one for you? 🎯",
-        time: "11:48 PM",
-        status: "read",
+        from: "agente",
+        text: "Oi!! Sim — nós temos 3 peças restantes tamanho M. Quer que eu deixe reservado para você? 🎯",
+        time: "23:48 ",
+        status: "lido",
       },
-      { from: "customer", text: "Yes please!", time: "11:49 PM" },
+      { from: "Cliente", text: "Sim, por favor!", time: "23:49 " },
     ],
   },
   resolved: {
     title: "FHPS Agent · online",
     messages: [
-      { from: "agent", text: "Your order is confirmed! 📦 Delivery Tuesday, 2–4 PM.", time: "11:50 PM", status: "read" },
-      { from: "customer", text: "That was so fast. Thank you!", time: "11:50 PM" },
-      { from: "system", text: "✓ Sale completed — lead converted in 2 min" },
+      { from: "agente", text: "Sua compra foi feita com sucesso! 📦 Entrega: Terça-feira, 14–16 horas.", time: "23:50 ", status: "lido" },
+      { from: "Cliente", text: "Foi rápido. Obrigada!", time: "23:50 " },
+      { from: "system", text: "✓ Venda Concluída — lead convertido em 2 minutos " },
     ],
   },
 };

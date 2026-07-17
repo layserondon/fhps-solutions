@@ -5,15 +5,15 @@ import { FadeIn } from "./FadeIn";
 const products = [
   {
     icon: TrendingUp,
-    name: "Sales Agent",
-    tagline: "Turns conversations into revenue.",
-    features: ["Lead qualification & scoring", "Cart-recovery closing", "Product recommendations"],
+    name: "Agentes de Vendas",
+    tagline: "Transforma conversas em receita.",
+    features: ["Secretária IA", "Conversão de recuperação de carrinho", "Recomendações de produtos"],
   },
   {
     icon: Headphones,
-    name: "Support Agent",
-    tagline: "Answers everything, instantly.",
-    features: ["FAQ automation", "Order status lookups", "Post-sale support"],
+    name: "Agente de Suporte ao Cliente",
+    tagline: "Responde a tudo, instantaneamente.",
+    features: ["Automação de perguntas frequentes, consulta de status de pedidos, suporte pós-venda"],
   },
   {
     icon: CalendarClock,

@@ -4,12 +4,12 @@ import { PhoneMockup } from "./PhoneMockup";
 import { FadeIn } from "./FadeIn";
 
 const capabilities = [
-  { icon: Zap, title: "Instant response", desc: "Answers the first contact in seconds, every time." },
-  { icon: Target, title: "Lead qualification", desc: "Identifies who's ready to buy and prioritizes them." },
-  { icon: CalendarCheck, title: "Automated booking", desc: "Schedules and confirms appointments with no human step." },
-  { icon: Workflow, title: "Funnel integration", desc: "Connects directly to your CRM, catalog, or checkout." },
-  { icon: Brain, title: "Continuous learning", desc: "Gets better with every conversation." },
-  { icon: UserCheck, title: "Smart handoff", desc: "Escalates to a human only when it truly matters." },
+  { icon: Zap, title: "Resposta imediata", desc: "Responde ao primeiro contato em segundos, sempre." },
+  { icon: Target, title: "Qualificação de leads", desc: "Identifica quem está pronto para comprar e prioriza esses clientes." },
+  { icon: CalendarCheck, title: "Agendamento automatizado", desc: "Agenda e confirma compromissos sem intervenção humana." },
+  { icon: Workflow, title: "Integração de funil", desc: "Conecta-se diretamente ao seu CRM, catálogo ou checkout." },
+  { icon: Brain, title: "Aprendizado contínuog", desc: "Fica melhor a cada conversa." },
+  { icon: UserCheck, title: "Transferência inteligente", desc: "Encaminha para um humano apenas quando realmente importa." },
 ];
 
 export function SolutionSection() {
@@ -23,11 +23,11 @@ export function SolutionSection() {
       <div className="relative mx-auto max-w-6xl">
         <FadeIn>
           <h2 className="font-display text-center text-3xl font-bold uppercase tracking-tight text-foreground sm:text-4xl">
-            Meet your new <span className="gradient-text">customer service team</span>
+            Conheça seu time de <span className="gradient-text">Atendimento ao cliente</span>
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-center text-muted-foreground">
-            An AI agent that lives inside your WhatsApp, answering every message like your best
-            salesperson — without breaks, sick days, or missed leads.
+          Um agente de IA que vive dentro do seu WhatsApp, respondendo a cada mensagem como o seu melhor vendedor
+           — sem pausas, licenças médicas ou leads perdidos.
           </p>
         </FadeIn>
         <div className="mt-14 grid items-center gap-12 lg:grid-cols-[auto_1fr]">

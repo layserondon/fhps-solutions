@@ -15,18 +15,18 @@ export function HeroSection() {
         <div className="text-center lg:text-left">
           <FadeIn>
             <p className="font-mono text-xs font-medium uppercase tracking-[0.3em] text-primary">
-              AI Agents for WhatsApp
+              Agents AI Para WhatsApp
             </p>
           </FadeIn>
           <FadeIn delay={100}>
             <h1 className="font-display mt-5 text-4xl font-bold uppercase leading-tight tracking-tight text-foreground sm:text-5xl lg:text-6xl">
-              Your customer service. <span className="gradient-text">Always online.</span>
+              Seu atendimento ao cliente. <span className="gradient-text">Sempre online.</span>
             </h1>
           </FadeIn>
           <FadeIn delay={200}>
             <p className="mx-auto mt-6 max-w-md text-base leading-relaxed text-muted-foreground lg:mx-0">
-              Respond to thousands of customers at once, convert leads into sales, and never miss
-              a message again — 24 hours a day.
+            Responda a milhares de clientes de uma só vez, converta leads em vendas e nunca mais perca uma mensagem 
+            — 24 horas por dia.
             </p>
           </FadeIn>
           <FadeIn delay={300}>
@@ -41,7 +41,7 @@ export function HeroSection() {
           </FadeIn>
           <FadeIn delay={400}>
             <p className="mt-8 text-xs font-medium uppercase tracking-widest text-muted-foreground">
-              Trusted by 500+ small businesses
+              Feito para facilitar seu negócio.
             </p>
           </FadeIn>
         </div>

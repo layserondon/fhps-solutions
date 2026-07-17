@@ -5,17 +5,17 @@ import { PhoneMockup } from "./PhoneMockup";
 import { FadeIn } from "./FadeIn";
 
 const before = [
-  "Replies hours later — or never",
-  "Leads go cold overnight",
-  "One conversation at a time",
-  "Bookings lost to phone tag",
+  "Respostas horas depois — ou nunca", 
+  "Os leads esfriam da noite para o dia", 
+  "Uma conversa de cada vez", 
+  "Reservas perdidas devido à etiqueta telefônica",
 ];
 
 const after = [
-  "First reply in seconds, 24/7",
-  "Leads qualified while you sleep",
-  "Thousands of chats at once",
-  "Appointments booked automatically",
+"Primeira resposta em segundos, 24 horas por dia, 7 dias por semana",
+"Leads qualificados enquanto você dorme",
+"Milhares de conversas simultâneas",
+"Agendamentos realizados automaticamente",
 ];
 
 export function BenefitsSection() {
@@ -24,15 +24,15 @@ export function BenefitsSection() {
       <div className="mx-auto max-w-6xl">
         <FadeIn>
           <h2 className="font-display text-center text-3xl font-bold uppercase tracking-tight text-foreground sm:text-4xl">
-            What actually <span className="gradient-text">changes</span>
+            O que realmente <span className="gradient-text">muda</span>
           </h2>
         </FadeIn>
         <div className="mt-14 grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-4">
           {[
-            { end: 10000, prefix: "+", label: "conversations handled simultaneously" },
-            { end: 3, suffix: "s", label: "average first-response time" },
-            { end: 35, prefix: "+", suffix: "%", label: "average increase in lead conversion" },
-            { end: 24, suffix: "/7", label: "availability — no days off, no breaks" },
+            { end: 10000, prefix: "+", label: "conversas tratadas simultaneamente" },
+            { end: 3, suffix: "s", label: "tempo médio de primeira resposta" },
+            { end: 35, prefix: "+", suffix: "%", label: "aumento médio na conversão de leads" },
+            { end: 24, suffix: "/7", label: "disponibilidade — sem folgas, sem pausas" },
           ].map((s, i) => (
             <FadeIn key={s.label} delay={i * 100}>
               <GlassCard glow="mint" className="h-full p-6 sm:p-8">
@@ -44,7 +44,7 @@ export function BenefitsSection() {
         <div className="mt-14 grid items-center gap-8 lg:grid-cols-[1fr_auto_1fr]">
           <FadeIn>
             <GlassCard className="p-8 opacity-80 saturate-50">
-              <p className="font-mono text-xs uppercase tracking-widest text-muted-foreground">Before — manual service</p>
+              <p className="font-mono text-xs uppercase tracking-widest text-muted-foreground">Antes— serviço manual</p>
               <ul className="mt-5 space-y-3">
                 {before.map((item) => (
                   <li key={item} className="flex items-start gap-3 text-sm text-muted-foreground">
@@ -60,7 +60,7 @@ export function BenefitsSection() {
           </FadeIn>
           <FadeIn delay={100}>
             <GlassCard glow="mint" gradient className="p-8">
-              <p className="font-mono text-xs uppercase tracking-widest text-accent">After — FHPS Agent</p>
+              <p className="font-mono text-xs uppercase tracking-widest text-accent">Depois — FHPS Agentes</p>
               <ul className="mt-5 space-y-3">
                 {after.map((item) => (
                   <li key={item} className="flex items-start gap-3 text-sm text-foreground">

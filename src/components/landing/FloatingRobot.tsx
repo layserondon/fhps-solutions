@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import robotAsset from "@/assets/robot-mascot.png.asset.json";
 
-const WHATSAPP_URL = "https://wa.me/0000000000?text=Hi!%20I%20want%20to%20know%20more%20about%20FHPS%20Agents";
+const WHATSAPP_URL = "https://wa.me/+5511961226352?text=Olá!%20I%20gostaria%20de%20saber%20mais%20sobre%20o%20FHPS%20Agentes";
 
 export function FloatingRobot() {
   const [dimmed, setDimmed] = useState(false);
@@ -20,19 +20,19 @@ export function FloatingRobot() {
 
   return (
     <div
-      className="fixed bottom-4 right-4 z-40 transition-opacity duration-500 sm:bottom-6 sm:right-6"
+      className="fixed bottom-4 right-4 z-40 transition-opacity duration-500 sm:bottom-6 sm:right-10"
       style={{ opacity: dimmed ? 0.25 : 1 }}
     >
       {hovered && (
         <div className="glass absolute -top-12 right-0 whitespace-nowrap rounded-xl px-4 py-2 text-xs font-medium text-foreground">
-          Need help? Chat with us →
+          Precisa de ajuda? Converse conosco →
         </div>
       )}
       <a
         href={WHATSAPP_URL}
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="Chat with us on WhatsApp"
+        aria-label="converse conosco no WhatsApp"
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
         className="relative block bg-transparent transition-transform duration-300 hover:scale-105"
