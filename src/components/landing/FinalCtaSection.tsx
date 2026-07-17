@@ -74,7 +74,7 @@ export function FinalCtaSection() {
                   className="glass mt-1.5 w-full rounded-xl px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/60 focus:border-primary/60 focus:outline-none"
                 />
               </div>
-              <SlidingTextButton type="submit" label="Start your free 7-day trial" size="lg" className="w-full" />
+              <SlidingTextButton type="submit" label="Automatize seu negócio AGORA" size="lg" className="w-full" />
               {status === "success" && (
                 <p className="rounded-xl border border-accent/30 bg-accent/10 px-4 py-3 text-center text-sm font-medium text-accent">
                   Obrigado! Entraremos em contato logo.
@@ -95,7 +95,7 @@ export function FinalCtaSection() {
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
           <div>
             <p className="font-display text-sm font-bold text-foreground">
-              FHPS <span className="gradient-text">AGENTES</span>
+              FHPS <span className="gradient-text">AGENTS IA</span>
             </p>
             <p className="mt-3 text-xs leading-relaxed text-muted-foreground">
             Agentes de IA que automatizam conversas no WhatsApp e convertem leads em vendas, 24/7.
