@@ -14,9 +14,12 @@ export function FinalCtaSection() {
     const formData = new FormData(form);
   
     const data = {
-      nome: formData.get("nome"),
-      whatsapp: formData.get("whatsapp"),
-      company: formData.get("company"),
+      nome: String(formData.get("nome") || "").trim(),
+    
+      whatsapp: String(formData.get("whatsapp") || "")
+        .replace(/\D/g, ""),
+    
+      company: String(formData.get("company") || "").trim(),
     };
   
     if (!data.nome || !data.whatsapp) {
@@ -85,7 +88,7 @@ export function FinalCtaSection() {
                   name="whatsapp"
                   type="tel"
                   required
-                  placeholder="+55 11 000 0000"
+                  placeholder="(11) 000 0000"
                   className="glass mt-1.5 w-full rounded-xl px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/60 focus:border-primary/60 focus:outline-none"
                 />
               </div>
