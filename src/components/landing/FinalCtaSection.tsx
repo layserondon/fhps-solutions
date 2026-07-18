@@ -7,18 +7,44 @@ import { FadeIn } from "./FadeIn";
 export function FinalCtaSection() {
   const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
 
-  const onSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const onSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+  
     const form = e.currentTarget;
-    const data = new FormData(form);
-    if (!data.get("nome") || !data.get("whatsapp")) {
+    const formData = new FormData(form);
+  
+    const data = {
+      nome: formData.get("nome"),
+      whatsapp: formData.get("whatsapp"),
+      company: formData.get("company"),
+    };
+  
+    if (!data.nome || !data.whatsapp) {
       setStatus("error");
       return;
     }
-    setStatus("success");
-    form.reset();
+  
+    try {
+      const response = await fetch(
+        "https://script.google.com/macros/s/AKfycbxXkEIbDT31BaZLNYjosmav3dhILCcK0FJVsYvTjN_NBl0XpbWnT5RjSkNVec883F-H/exec",
+        {
+          method: "POST",
+          body: JSON.stringify(data),
+        }
+      );
+  
+      if (!response.ok) {
+        throw new Error("Erro");
+      }
+  
+      setStatus("success");
+      form.reset();
+  
+    } catch (error) {
+      console.error(error);
+      setStatus("error");
+    }
   };
-
   return (
     <section id="cta" className="relative px-4 pb-10 pt-24">
       <div
@@ -116,7 +142,7 @@ export function FinalCtaSection() {
           <div>
             <p className="text-xs font-semibold uppercase tracking-widest text-muted-foreground">Empresa</p>
             <ul className="mt-4 space-y-2 text-sm">
-              {["About", "Careers", "Terms", "Privacy"].map((l) => (
+              {["Sobre", "Carreiras", "Termos", "Privacidade"].map((l) => (
                 <li key={l}>
                   <a href="#top" className="text-muted-foreground transition-colors hover:text-foreground">
                     {l}
@@ -143,7 +169,7 @@ export function FinalCtaSection() {
           </div>
         </div>
         <p className="mt-10 border-t border-border pt-6 text-center text-xs text-muted-foreground">
-          © 2026 FHPS Agentes. Todos os direitos reservados.
+          © 2026 FHPS Agents IA. Todos os direitos reservados.
         </p>
       </footer>
     </section>
