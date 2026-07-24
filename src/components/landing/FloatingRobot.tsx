@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import robotAsset from "@/assets/robot-mascot.png.asset.json";
+import roboMascote from "@/assets/robo-mascote-foto.jpg";
 
 // Replace with actual WhatsApp number or email
 const WHATSAPP_NUMBER = '5511961226352';
@@ -33,11 +33,11 @@ export function FloatingRobot() {
           Converse conosco →
         </div>
       )}
-      <a
+      
         href={WHATSAPP_URL}
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="conserse cononsco"
+        aria-label="converse cononsco"
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
         className="relative block bg-transparent transition-transform duration-300 hover:scale-105"
@@ -51,7 +51,7 @@ export function FloatingRobot() {
           }}
         />
         <img
-          src={robotAsset.url}
+          src={roboMascote}
           alt="FHPS Agents robot assistant"
           className="animate-float-soft h-[90px] w-auto sm:h-[125px]"
           loading="lazy"
