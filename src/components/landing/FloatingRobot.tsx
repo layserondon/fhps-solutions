@@ -30,14 +30,14 @@ export function FloatingRobot() {
     >
       {hovered && (
         <div className="glass absolute -top-12 right-0 whitespace-nowrap rounded-xl px-4 py-2 text-xs font-medium text-foreground">
-          Precisa de ajuda? →
+          Converse conosco →
         </div>
       )}
       <a
         href={WHATSAPP_URL}
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="conserse cononsco no WhatsApp"
+        aria-label="conserse cononsco"
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
         className="relative block bg-transparent transition-transform duration-300 hover:scale-105"
